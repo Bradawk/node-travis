@@ -10,8 +10,7 @@ curl https://sdk.cloud.google.com | bash -s -- --disable-prompts > /dev/null
 export PATH=${HOME}/google-cloud-sdk/bin:${PATH}
 gcloud --quiet components install kubectl
 
-#echo ${GCLOUD_SERVICE_KEY} | base64 --decode -i > ${HOME}/gcloud-service-key.json
-echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > ${HOME}/gcloud-service-key.json
+echo ${GCLOUD_SERVICE_KEY} | base64 --decode -i > ${HOME}/gcloud-service-key.json
 gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
 
 gcloud --quiet config set project ${PROJECT_ID}

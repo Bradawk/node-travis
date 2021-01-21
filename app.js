@@ -6,8 +6,8 @@ app.get('/', (req, res) => {
   res.send('Hello travis');
 });
 
-const server = app.listen(3000, () => {
-  console.log('Running on 3000');
+const server = app.listen(8080, () => {
+  console.log('Running on 8080');
 });
 
 module.exports = server;

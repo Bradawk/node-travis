@@ -6,6 +6,7 @@ if [ -z "$TRAVIS" ]; then
 	exit 1
 fi
 
+echo "coucou"
 curl https://sdk.cloud.google.com | bash -s -- --disable-prompts > /dev/null
 export PATH=${HOME}/google-cloud-sdk/bin:${PATH}
 gcloud --quiet components install kubectl

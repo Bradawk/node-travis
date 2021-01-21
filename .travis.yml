@@ -10,6 +10,7 @@ script:
   - echo "npm test"  
 
 deploy:
+  skip_cleanup: true
   provider: script
   script: bash scripts/deploy.sh
   on:

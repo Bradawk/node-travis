@@ -6,12 +6,11 @@ node_js:
 services:
   - docker
 
-cache:
-  directories:
-    - "node_modules"
-
 deploy:
   - provider: script
     script: scripts/deploy.sh
     on:
       branch: master
+
+
+      

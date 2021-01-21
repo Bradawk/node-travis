@@ -8,10 +8,11 @@ services:
 
 deploy:
   - provider: script
-    skip_cleanup: true
     script: scripts/deploy.sh
     on:
       branch: master
+    skip_cleanup: true
+  
 
 
       

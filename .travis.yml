@@ -9,6 +9,10 @@ services:
 script:
   - echo "npm test"  
 
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_7abe79801ba7_key -iv -in iaas-ccm1-302108-a04c21265507.json.enc -out iaas-ccm1-302108-a04c21265507.json -d
+
 deploy:
   skip_cleanup: true
   provider: script
